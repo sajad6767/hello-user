@@ -11,4 +11,16 @@ public class AppTest {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+    @Test public void appSetUserNameCorrectly(){
+        App classUnderTest = new App();
+        String userName = "Ali";
+        classUnderTest.setUserName(userName);
+        assertEquals(classUnderTest.userName,userName);
+    }
+    @Test public void appHelloToUser() {
+        App classUnderTest = new App();
+        String userName = "Ali";
+        classUnderTest.setUserName(userName);
+        assertEquals(classUnderTest.helloToUser(),"Hello "+userName+"!");
+    }
 }

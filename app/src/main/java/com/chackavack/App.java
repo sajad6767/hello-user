@@ -4,11 +4,21 @@
 package com.chackavack;
 
 public class App {
+    public String userName;
     public String getGreeting() {
-        return "Hello World!";
+        return "Hello ali!";
+    }
+    public void setUserName(String name){
+        this.userName = name;
+    }
+    public String helloToUser(){
+        return "Hello "+this.userName+"!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        App app = new App();
+        String userName = "Ali";
+        app.setUserName(userName);
+        System.out.println(app.helloToUser());
     }
 }
